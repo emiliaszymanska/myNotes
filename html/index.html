@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../styles/stylesheet.css">
+        <script src="https://kit.fontawesome.com/883fa882bb.js"></script>
+        <script src="../scripts/notes.js" defer></script>
+        <title>My Notes</title>
+    </head>
+
+    <body>
+        <button class="add-note">Add note</button>
+
+        <div id="notes"></div>
+
+        <template id="note-template">
+            <div class="note">
+                <div class="note-header">
+                    <p class="note-title" contenteditable="true"></p>
+                    <button class="button-delete"><i class="far fa-trash-alt"></i></button>
+                </div>
+                <div class="note-body">
+                    <textarea class="note-text" placeholder="Type your note here"></textarea>
+                </div>
+            </div>
+        </template>
+    </body>
+</html>
