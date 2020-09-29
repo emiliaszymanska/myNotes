@@ -1,0 +1,76 @@
+:root {
+    --font-size: 14px;
+}
+
+html {
+    background: url("../images/background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Gill Sans', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-note {
+    background-color: rgba(245, 245, 245, 0.3);
+    margin: 1em 0 3em;
+    padding: 0.6em 1.7em;
+    border-radius: 0.2em;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.add-note:hover {
+    /*background-color: rgba(179, 177, 177, 0.7);*/
+    background-color: rgba(100, 175, 196, 0.7);
+}
+
+#notes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.note {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.note-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: darkgray;
+    font-size: 0.6em;
+}
+
+.note-title {
+    border: black;
+    font-size: var(--font-size);
+}
+
+.note-text {
+    font-size: var(--font-size);
+}
