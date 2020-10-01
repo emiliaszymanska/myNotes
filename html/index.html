@@ -10,19 +10,19 @@
     </head>
 
     <body>
-        <button class="add-note">Add note</button>
+        <div class="container">
+            <button class="add-note">Add note</button>
 
-        <div id="notes"></div>
+            <div id="notes"></div>
+        </div>
 
         <template id="note-template">
             <div class="note">
                 <div class="note-header">
-                    <p class="note-title" contenteditable="true"></p>
-                    <button class="button-delete"><i class="far fa-trash-alt"></i></button>
+                    <input class="note-title" type="text" placeholder="Title">
+                    <button class="button-delete"><i class="far fa-trash-alt fa-m"></i></button>
                 </div>
-                <div class="note-body">
-                    <textarea class="note-text" placeholder="Type your note here"></textarea>
-                </div>
+                <textarea class="note-text" rows="12" cols="20" style="resize: none" placeholder="Type your note here"></textarea>
             </div>
         </template>
     </body>
