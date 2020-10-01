@@ -1,7 +1,7 @@
 let noteNumber = 0;
 const addButton = document.querySelector('.add-note');
 
-function addNote(title, description) {
+function addNote(title = '', description = '') {
     const addNewNote = function () {
         noteNumber++;
 
@@ -15,7 +15,7 @@ function addNote(title, description) {
     }
 
     const note = addNewNote();
-    document.getElementById('#notes').appendChild(note);
+    document.getElementById('notes').appendChild(note);
 }
 
 addButton.addEventListener('click', () => addNote())
