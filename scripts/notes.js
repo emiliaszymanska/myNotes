@@ -2,6 +2,7 @@ let noteNumber = 0;
 const addButton = document.querySelector('.add-note');
 
 (() => {
+    window.setInterval(saveData, 5 * 1000);
     addButton.addEventListener('click', () => addNote());
 }) ();
 
@@ -15,6 +16,11 @@ function addNote(title = '', content = '') {
         clonedTemplate.querySelector('div.note').setAttribute('id', 'id_' + noteNumber);
         clonedTemplate.querySelector('input.note-title').value = title;
         clonedTemplate.querySelector('textarea.note-text').value = content;
+
+        clonedTemplate.querySelector('button.button-delete').addEventListener('click', function () {
+            localStorage.removeItem('id_' + noteNumber);
+            this.closest('div.note').remove();
+        });
 
         return clonedTemplate;
     }
