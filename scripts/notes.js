@@ -2,6 +2,7 @@ let noteNumber = 0;
 const addButton = document.querySelector('.add-note');
 
 (() => {
+    getData();
     window.setInterval(saveData, 5 * 1000);
     addButton.addEventListener('click', () => addNote());
 }) ();
@@ -39,5 +40,19 @@ function saveData() {
                         'content': note.querySelector('textarea.note-text').value};
 
         localStorage.setItem(note.id, JSON.stringify(noteJSON));
+    }
+}
+
+function getData() {
+    for (let i = 0; i < localStorage.length; i++) {
+        let noteKey = localStorage.key(i);
+
+        if (noteKey.includes('id_')) {
+            let note = JSON.parse(localStorage.getItem(noteKey));
+            let title = note.title;
+            let content = note.content;
+
+            addNote(title, content);
+        }
     }
 }
