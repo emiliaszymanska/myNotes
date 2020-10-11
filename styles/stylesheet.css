@@ -49,14 +49,14 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    margin: 5em 10em 6em;
+    margin: 5em 7em 6em;
 }
 
 .note {
     display: flex;
     flex-direction: column;
     justiy-content: space-between;
-    margin: 0.5em 0;
+    margin: 0.5em 0.5em;
 }
 
 .note-header {
